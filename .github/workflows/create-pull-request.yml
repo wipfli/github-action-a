@@ -15,3 +15,4 @@ jobs:
     - run: git add hello.txt
     - run: git commit -m "say hi"
     - run: git push --set-upstream origin test
+    - run: gh pr create --base main --fill
