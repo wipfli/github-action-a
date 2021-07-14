@@ -8,9 +8,10 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v2
-    - run: |
-        git checkout -b test
-        touch hello.txt
-        git add hello.txt
-        git commit -m "say hi"
-        git push 
+    - run: git checkout -b test
+    - run: touch hello.txt
+    - run: git config --global user.email "mail@example.com"
+    - run: git config --global user.name "GitHub Action"
+    - run: git add hello.txt
+    - run: git commit -m "say hi"
+    - run: git push 
