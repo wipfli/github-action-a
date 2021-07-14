@@ -12,11 +12,13 @@ jobs:
       uses: actions/setup-node@v1
       with:
         node-version: 14.x
-    - run: git checkout -b $(npm show maplibre-gl version)
+    - run: git checkout -b test-1
     - run: touch hello.txt
     - run: git config --global user.email "mail@example.com"
     - run: git config --global user.name "GitHub Action"
     - run: git add hello.txt
     - run: git commit -m "say hi"
-    - run: git push --set-upstream origin $(npm show maplibre-gl version)
+    - run: git push --set-upstream origin test-1
     - run: gh pr create --base main --fill
+      env:
+        GITHUB_TOKEN: ${{secrets.GITHUB_TOKEN}}
