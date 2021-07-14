@@ -10,7 +10,7 @@ jobs:
     - uses: actions/checkout@v2
     - run: |
       git checkout -b test
-      echo "hi" > hello.txt
+      touch hello.txt
       git add hello.txt
       git commit -m "say hi"
       git push 
