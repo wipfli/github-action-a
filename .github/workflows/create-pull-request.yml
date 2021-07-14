@@ -9,8 +9,8 @@ jobs:
     steps:
     - uses: actions/checkout@v2
     - run: |
-      git checkout -b test
-      touch hello.txt
-      git add hello.txt
-      git commit -m "say hi"
-      git push 
+        git checkout -b test
+        touch hello.txt
+        git add hello.txt
+        git commit -m "say hi"
+        git push 
