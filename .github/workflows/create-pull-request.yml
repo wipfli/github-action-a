@@ -14,4 +14,4 @@ jobs:
     - run: git config --global user.name "GitHub Action"
     - run: git add hello.txt
     - run: git commit -m "say hi"
-    - run: git push 
+    - run: git push --set-upstream origin test
